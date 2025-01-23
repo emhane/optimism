@@ -230,7 +230,8 @@ type ExecutionPayload struct {
 	// Nil if not present (Bedrock, Canyon, Delta)
 	BlobGasUsed *Uint64Quantity `json:"blobGasUsed,omitempty"`
 	// Nil if not present (Bedrock, Canyon, Delta)
-	ExcessBlobGas *Uint64Quantity `json:"excessBlobGas,omitempty"`
+	ExcessBlobGas   *Uint64Quantity `json:"excessBlobGas,omitempty"`
+	WithdrawalsRoot *common.Hash    `json:"withdrawalsRoot,omitempty"`
 }
 
 func (payload *ExecutionPayload) ID() BlockID {
